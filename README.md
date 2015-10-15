@@ -25,16 +25,14 @@ You should create one R script called run_analysis.R that does the following:
 
   **Please note** based on assignment description n°2
   the regex expression filters out:
+- set of meanFreq() variables  
 
-    - set of meanFreq() variables
-
-    All of the following vectors used on the angle() variable
-
-    - gravityMean
-    - tBodyAccMean
-    - tBodyAccJerkMean
-    - tBodyGyroMean
-    - tBodyGyroJerkMean
+  All of the following vectors used on the angle() variable:
+- gravityMean
+- tBodyAccMean
+- tBodyAccJerkMean
+- tBodyGyroMean
+- tBodyGyroJerkMean
 
 **3 - Editing the activity variable**
 
@@ -44,7 +42,7 @@ You should create one R script called run_analysis.R that does the following:
 **4 - Creating a second tidy dataset**
 
 There are different viable ways to achieve this, either by aggregating, reshaping or
-using dplyr. I went the **dplyr** way as it guarantees best readability in code.  
+using `dplyr`. I went the `dplyr` way as it guarantees best readability in code.  
 
   a. assign the merged dataframe to a "local" dataframe.  
   b. group the local dataframe by activity and subject.  
@@ -57,11 +55,9 @@ using dplyr. I went the **dplyr** way as it guarantees best readability in code.
 
 1. Download [dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 and extract to your working directory (or just set your working directory to the dir you extracted the dataset in after extraction).  
-2. Download [script](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R)
-and place it into your working directory.  
-3. Execute source("run_analysis.R").  
-4. Execute submit() and it will generate a new file called "tiny_dataset.txt" in your working directory.
+2. Go to the [script page](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R), copy the script and paste to console, then execute.  
+You will find a new *tidy_dataset.txt* file created in your working directory.
 
 ## Dependencies
 
-Only dependency is dplyr. It will be installed by the script in case it is not already installed.  
+Only dependency is `dplyr`. It will be installed by the script in case it is not already installed.  
