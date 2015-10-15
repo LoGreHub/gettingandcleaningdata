@@ -57,10 +57,10 @@ using dplyr. I went the **dplyr** way:
 
 1. Download [dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 and extract to your working directory (or just set your working directory to the dir you extracted the dataset in after extraction).  
-2. [Download]("https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R") the script
+2. [Download](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R) the script
 and place it into your working directory.  
-3. Execute source("run_analysis.R").  
-4. Execute submit() and it will generate a new file called "tiny_dataset.txt" in your working directory.
+3. Execute '''source("run_analysis.R")'''.  
+4. Execute '''submit()''' and it will generate a new file called "tiny_dataset.txt" in your working directory.
 
 ## Dependencies
 
