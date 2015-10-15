@@ -30,11 +30,11 @@ You should create one R script called run_analysis.R that does the following:
 
     All of the following vectors used on the angle() variable
 
-      - gravityMean
-      - tBodyAccMean
-      - tBodyAccJerkMean
-      - tBodyGyroMean
-      - tBodyGyroJerkMean
+    - gravityMean
+    - tBodyAccMean
+    - tBodyAccJerkMean
+    - tBodyGyroMean
+    - tBodyGyroJerkMean
 
 **3 - Editing the activity variable**
 
@@ -44,7 +44,7 @@ You should create one R script called run_analysis.R that does the following:
 **4 - Creating a second tidy dataset**
 
 There are different viable ways to achieve this, either by aggregating, reshaping or
-using dplyr. I went the **dplyr** way:
+using dplyr. I went the **dplyr** way as it guarantees best readability in code.  
 
   a. assign the merged dataframe to a "local" dataframe.  
   b. group the local dataframe by activity and subject.  
@@ -57,10 +57,10 @@ using dplyr. I went the **dplyr** way:
 
 1. Download [dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 and extract to your working directory (or just set your working directory to the dir you extracted the dataset in after extraction).  
-2. [Download](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R) the script
+2. Download [script](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R)
 and place it into your working directory.  
-3. Execute _source("run_analysis.R")_.  
-4. Execute _submit()_ and it will generate a new file called "tiny_dataset.txt" in your working directory.
+3. Execute source("run_analysis.R").  
+4. Execute submit() and it will generate a new file called "tiny_dataset.txt" in your working directory.
 
 ## Dependencies
 
