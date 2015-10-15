@@ -2,12 +2,12 @@
 ## Assignment description
 
 You should create one R script called run_analysis.R that does the following.
-1- Merges the training and the test sets to create one data set.
 
-2- Extracts only the measurements on the mean and standard deviation for each measurement.
-3- Uses descriptive activity names to name the activities in the data set
-4- Appropriately labels the data set with descriptive variable names.
-5- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
 ## How the run_analyse script works
@@ -20,8 +20,8 @@ You should create one R script called run_analysis.R that does the following.
 
 **2 - Labeling and subsetting**
 
-  a. Reads the features file and assigns label to columns in merged dataframe
-  b. picks relevant features and subsets the dataframe
+  a. Reads the features file and assigns label to columns in merged dataframe.
+  b. picks relevant features and subsets the dataframe.
 
   **Please note** based on assignment description n°2
   the regex expression filters out:
@@ -38,19 +38,19 @@ You should create one R script called run_analysis.R that does the following.
 
 **3 - Editing the activity variable**
 
-  a. Reads the activity labels file
-  b. Replaces activity ids with activity names
+  a. Reads the activity labels file.
+  b. Replaces activity ids with activity names.
 
 **4 - Creating a second tidy dataset**
 
 There are different viable ways to achieve this, either by aggregating, reshaping or
 using dplyr. I went the **dplyr** way:
 
-  a. assign the merged dataframe to a "local" dataframe
-  b. group the local dataframe by activity and subject
-  c. summarise each column via mean function
-  d. arrange by activity and subject
-  e. write resulting tidy dataset to file
+  a. assign the merged dataframe to a "local" dataframe.
+  b. group the local dataframe by activity and subject.
+  c. summarise each column via mean function.
+  d. arrange by activity and subject.
+  e. write resulting tidy dataset to file.
 
 
 ## How to test the script
