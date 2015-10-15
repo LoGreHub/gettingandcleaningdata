@@ -1,23 +1,23 @@
 ## Project Description
 Tidy dataset creation assignment
 
-##Study design and data processing
+## Study design and data processing
 
-###Collection of the raw data
+### Collection of the raw data
 Data was downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Original dataset can be found at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-###Notes on the original (raw) data
+### Notes on the original (raw) data
 Please download the dataset from the above link and consult:
 
 - readme.txt
 - features_info.txt
 
-##Creating the tidy datafile
+## Creating the tidy datafile
 
-###Guide to create the tidy data file
+### Guide to create the tidy data file
 
 1. Download data
 2. Merge data
@@ -25,14 +25,14 @@ Please download the dataset from the above link and consult:
 4. Summarise data
 5. Order data
 
-###Cleaning of the data
+### Cleaning of the data
 Please refer to [this](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/README.md) link for details.
 
-##Description of the variables in the tiny_data.txt file
-Tidy dataset consists of 180 observations and 68 variables, describing 66 average measurements grouped by
+## Description of the variables in the tiny_data.txt file
+Tidy dataset consists of 180 observations and 68 variables, describing 66 **average** measurements grouped by
 activity and subject.
 
-Measurement variable labels follow both schema and naming of the original dataset **but contain the mean of the value of original measurements grouped by activity and subject.**
+Measurement variable labels follow both schema and naming of the original dataset **but values actually represent the mean of the values of original measurements grouped by activity and subject.** 
 
 First 2 columns contain categorical data (activity, subject) while all other 66 contain numerical data.
 

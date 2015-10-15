@@ -16,7 +16,7 @@ You should create one R script called run_analysis.R that does the following:
 
   a. Reads data for train set (subject,x,y) and binds it by columns.  
   b. Repeats step "a" for test set.  
-  c. Merges data from train and test set binding them by row.  
+  c. Merges data from train and test sets binding them by row.  
 
 **2 - Labeling and subsetting**
 
@@ -25,14 +25,14 @@ You should create one R script called run_analysis.R that does the following:
 
   **Please note** based on assignment description n°2
   the regex expression filters out:
-- set of meanFreq() variables  
+- set of *meanFreq()* variables  
 
   All of the following vectors used on the angle() variable:
-- gravityMean
-- tBodyAccMean
-- tBodyAccJerkMean
-- tBodyGyroMean
-- tBodyGyroJerkMean
+- *gravityMean*
+- *tBodyAccMean*
+- *tBodyAccJerkMean*
+- *tBodyGyroMean*
+- *tBodyGyroJerkMean*
 
 **3 - Editing the activity variable**
 
@@ -42,22 +42,34 @@ You should create one R script called run_analysis.R that does the following:
 **4 - Creating a second tidy dataset**
 
 There are different viable ways to achieve this, either by aggregating, reshaping or
-using `dplyr`. I went the `dplyr` way as it guarantees best readability in code.  
+using `dplyr` (and probably many other as well).
+
+I went the `dplyr` way as it guarantees best readability in code:
 
   a. assign the merged dataframe to a "local" dataframe.  
   b. group the local dataframe by activity and subject.  
-  c. summarise each column via mean function.  
-  d. arrange by activity and subject.  
+  c. taking averages of measurement values by group as requested.  
+  d. order by activity and subject.  
   e. write resulting tidy dataset to file.  
 
+I added code for other aggregation and reshaping implementation at the bottom of the script and commented them, feel free to uncomment and use them instead of the dplyr code, they lead to same results.
+
+## One note regarding labeling  
+
+Points can be made on the need for relabeling both the original dataset and the tidy dataset after taking the means of numerical measurements.  
+
+In first case I didn't proceed with relabeling as there was no way (IMHO obviously) to make labels cleaner while retaining the same degree of semantics depth.  
+
+In second case (and assuming first case) adding any kind of "mean" related prefix or suffix to labels would add semantic mess instad of tidyness. What the value represent is highlighted though in the CodeBook file.
 
 ## How to test the script
 
 1. Download [dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 and extract to your working directory (or just set your working directory to the dir you extracted the dataset in after extraction).  
-2. Go to the [script page](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R), copy the script and paste to console, then execute.  
+2. Go to the [script page](https://github.com/LoGreHub/gettingandcleaningdata/blob/master/run_analysis.R), copy the script text and paste it to console in R-Studio, then execute.  
 You will find a new *tidy_dataset.txt* file created in your working directory.
 
 ## Dependencies
 
-Only dependency is `dplyr`. It will be installed by the script in case it is not already installed.  
+Only dependency is `dplyr`. It will be installed by the script in case it is not already installed in your system.  
+In case you want to experiment with the `reshape2` method at the bottom , the script will take care of installing duties as well.  
