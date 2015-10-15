@@ -14,9 +14,9 @@ You should create one R script called run_analysis.R that does the following.
 
 **1 - Reading and merging data**
 
-  a. Reads data for train set (subject,x,y) and binds it by columns
-  b. Repeats step "a" for test set
-  c. Merges data from train and test set binding them by row
+  a. Reads data for train set (subject,x,y) and binds it by columns.
+  b. Repeats step "a" for test set.
+  c. Merges data from train and test set binding them by row.
 
 **2 - Labeling and subsetting**
 
