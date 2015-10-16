@@ -45,7 +45,7 @@ write.table(tidy_data,file="tidy_dataset.txt",row.name = F)
 
 # # create other tidy dataset from merged, base method
 # 
-# subselection = merged[3:dim(merged)[2]]
+# subselection = merged[3:ncol(merged)]
 # criteria = list(activity = merged$activity, subject = merged$subject)
 # tidy_data = aggregate(subselection,criteria,mean)
 # tidy_data = tidy_data[order(tidy_data$activity,tidy_data$subject),]
